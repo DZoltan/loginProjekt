@@ -21,7 +21,8 @@
                 <button type="submit">Bejelentkezés</button>
             </div>
         </div>
-
+<?php 
+?>
     </form>
 </body>
 </html>
