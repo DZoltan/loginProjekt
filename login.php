@@ -1,3 +1,11 @@
+
+<style>
+p {
+  color: red;
+  text-align: center;
+  font-size: larger;
+}
+</style>
 <?php
     include 'password.php';
 
@@ -8,14 +16,20 @@
     $obj = new Password();
 
     if( $obj -> getPassword($email."*".$password)){
-        $szin =  mysqli_query($mysqli, "select Titkos from tabla where username = '" . $email . "'");
+        $color =  mysqli_query($mysqli, "select Titkos from tabla where username = '" . $email . "'");
 
-        while ($eredmeny= mysqli_fetch_row($szin))
+        while ($result= mysqli_fetch_row($color))
         {
-        echo  $eredmeny[0];
+            $_SESSION["color"] =  $result[0];
+            header("Location: profile.php");
         }
     }
     else{
+        echo "<p>A felhasználónév vagy a jelszó nem megfelelő!</p>";
+        //session_destroy();
+        sleep(3);
+        header("Location: http://www.police.hu/");
+        
     }
 
     

@@ -1,0 +1,58 @@
+body{
+    position: relative;
+    background-image: url('img/login_bg.png');
+    background-size: cover;
+}
+
+.form-border {
+    position: absolute;
+    top: 30em;
+    left: 45em;
+
+}
+
+.form{
+    position: relative;
+    border: olivedrab thick solid;
+    width: 30em;
+    height: 20em;
+
+}
+
+.username, .password{
+    
+    width: 30em;
+    height: 7em;
+    
+
+}
+
+#user_label, #pass_label{
+    position: relative;
+    left: 8%;
+    top: 40%;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#user_input, #pass_input {
+    position: relative;
+    top: 40%;
+    height: 2em;
+}
+
+#user_input{
+    left: 25%;
+}
+
+#pass_input{
+    left: 43%;
+}
+
+.button{
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    top: 10%;
+}
+
